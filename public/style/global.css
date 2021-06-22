@@ -1,28 +1,88 @@
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(/assets/fonts/Inter-Regular.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  src: url(/assets/fonts/Inter-SemiBold.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: block;
+  src: url(/assets/fonts/Inter-ExtraBold.ttf) format('ttf');
+}
+
 * {
   box-sizing: border-box;
-  margin: 0;
 }
 
 :root {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-  font-size: 1rem;
   --user-font-scale: 1rem - 16px;
-  font-size: clamp(0.875rem, 0.4626rem + 1.0309vw + var(--user-font-scale), 1.125rem);
+  --color-primary: #141414;
+  --color-secondary: #e0e0e0;
+  --font-regular: 400;
+  --font-semibold: 600;
+  --font-extrabold: 800;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  padding: 4rem 2rem;
   width: 100%;
   min-height: 100vh;
-  display: grid;
-  justify-content: center;
-  background: #f9fafb;
-  color: #111827;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  font-family: 'Inter', sans-serif;
+  font-weight: var(--font-regular);
+  font-size: 1rem;
+  font-size: clamp(0.875rem, 0.4626rem + 1.0309vw + var(--user-font-scale), 1.125rem);
+}
+
+/*
+  3rem + 5rem is the top and bottom margin added to header
+  64px is the fixed height of header
+  In order to always have main content cover full page
+*/
+main {
+  min-height: calc(100vh - (3rem + 5rem + 64px));
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-extrabold);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.container {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    background: #111827;
-    color: #fff;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+  }
+
+  a {
+    color: var(--color-secondary);
   }
 }

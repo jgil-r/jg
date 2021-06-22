@@ -1,0 +1,39 @@
+<header>
+    <ul>
+        <li>
+            <a href="https://github.com/jgil-r" target="_blank" rel="noopener noreferrer">Github</a>
+        </li>
+        <li>
+            <a href="https://twitter.com/jgil_r" target="_blank" rel="noopener noreferrer">Twitter</a>
+        </li>
+    </ul>
+</header>
+
+<style>
+    header {
+        height: 64px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 3rem 0 5rem;
+        position: sticky;
+        top: 0;
+        background-color: var(--color-secondary);
+    }
+
+    ul {
+        padding-left: 0;
+        list-style: none;
+        display: flex;
+    }
+
+    ul > li {
+        margin-left: 1rem;
+    }
+
+    @media (prefers-color-scheme: dark) {
+    header {
+        background-color: var(--color-primary);
+    }
+}
+</style>
