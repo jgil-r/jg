@@ -1,10 +1,10 @@
 <header>
     <ul>
         <li>
-            <a href="https://github.com/jgil-r" target="_blank" rel="noopener noreferrer">Github</a>
+            <a class="header-button" href="https://github.com/jgil-r" target="_blank" rel="noopener noreferrer">Github</a>
         </li>
         <li>
-            <a href="https://twitter.com/jgil_r" target="_blank" rel="noopener noreferrer">Twitter</a>
+            <a class="header-button" href="https://twitter.com/jgil_r" target="_blank" rel="noopener noreferrer">Twitter</a>
         </li>
     </ul>
 </header>
@@ -31,9 +31,44 @@
         margin-left: 1rem;
     }
 
-    @media (prefers-color-scheme: dark) {
-    header {
-        background-color: var(--color-primary);
+    .header-button {
+        padding: var(--space-sm) var(--space-md);
+        border: 1px solid var(--color-primary);
+        border-radius: var(--radius-sm);
+        color: var(--color-primary);
+        background-color: var(--color-secondary);
+        transition-property: background-color, color;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-out;
     }
-}
+
+    .header-button:hover {
+        color: var(--color-secondary);
+        background-color: var(--color-primary);
+        transition-property: background-color, color;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-in;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        header {
+            background-color: var(--color-primary);
+        }
+        .header-button {
+            border: 1px solid var(--color-secondary);
+            color: var(--color-secondary);
+            background-color: var(--color-primary);
+            transition-property: background-color, color;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-out;
+        }
+
+        .header-button:hover {
+            color: var(--color-primary);
+            background-color: var(--color-secondary);
+            transition-property: background-color, color;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-in;
+        }
+    }
 </style>

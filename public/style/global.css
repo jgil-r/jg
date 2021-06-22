@@ -1,25 +1,25 @@
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url(/assets/fonts/Inter-Regular.ttf) format('ttf');
+  src: url(/assets/fonts/Inter-Regular.ttf) format("ttf");
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 600;
   font-display: block;
-  src: url(/assets/fonts/Inter-SemiBold.ttf) format('ttf');
+  src: url(/assets/fonts/Inter-SemiBold.ttf) format("ttf");
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 800;
   font-display: block;
-  src: url(/assets/fonts/Inter-ExtraBold.ttf) format('ttf');
+  src: url(/assets/fonts/Inter-ExtraBold.ttf) format("ttf");
 }
 
 * {
@@ -33,6 +33,9 @@
   --font-regular: 400;
   --font-semibold: 600;
   --font-extrabold: 800;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --radius-sm: 3px;
 }
 
 html,
@@ -46,10 +49,14 @@ body {
   min-height: 100vh;
   background-color: var(--color-secondary);
   color: var(--color-primary);
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: var(--font-regular);
   font-size: 1rem;
-  font-size: clamp(0.875rem, 0.4626rem + 1.0309vw + var(--user-font-scale), 1.125rem);
+  font-size: clamp(
+    0.875rem,
+    0.4626rem + 1.0309vw + var(--user-font-scale),
+    1.125rem
+  );
 }
 
 /*
@@ -61,7 +68,12 @@ main {
   min-height: calc(100vh - (3rem + 5rem + 64px));
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: var(--font-extrabold);
 }
 
