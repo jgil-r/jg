@@ -3,8 +3,8 @@
 
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
+  exclude: ['.git'],
   mount: {
-    jg: '/.git'
     /* ... */
   },
   plugins: [
