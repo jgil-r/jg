@@ -8,10 +8,23 @@ let title = "Home";
 
 <html lang="en">
   <head>
+    <title>Jesus Gil | {title}</title>
+    <meta name="description" content="Jesus Gil, Software Developer based in Chicago.">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Jesus Gil personal website">
+    <meta name="twitter:description" content="Jesus Gil, Software Developer based in Chicago.">
+    <meta name="twitter:creator" content="@jgil_r">
+    <meta name="twitter:image" content="https://www.jesus-gil.com/assets/headshot.jpg">
+
+    <meta property="og:title" content="Jesus Gil personal website">
+    <meta property="og:url" content="https://www.jesus-gil.com/">
+    <meta property="og:image" content="https://www.jesus-gil.com/assets/headshot.jpg">
+    <meta property="og:description" content="Jesus Gil, Software Developer based in Chicago.">
+    <meta property="og:site_name" content="Jesus Gil personal website">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Jesus Gil | {title}</title>
 
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="stylesheet" href="/style/global.css">
@@ -20,7 +33,7 @@ let title = "Home";
     <div class="container">
       <Header/>
       <main>
-        <section class="section-gap">
+        <section>
           <div class="avatar-container">
             <img src="/assets/headshot.jpg" alt="Jesus Gil headshot"/>
           </div>
@@ -48,10 +61,6 @@ let title = "Home";
 </html>
 
 <style>
-  .section-gap {
-    margin-bottom: var(--space-xl);
-  }
-
   .avatar-container {
     width: 100px;
     height: 100px;
