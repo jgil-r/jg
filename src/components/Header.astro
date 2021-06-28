@@ -10,6 +10,9 @@ import ExternalLink from './ExternalLink.astro';
     <li>
       <ExternalLink href="https://twitter.com/jgil_r">Twitter</ExternalLink>
     </li>
+    <li>
+      <ExternalLink href="https://www.polywork.com/jesusgil">Polywork</ExternalLink>
+    </li>
   </ul>
 </header>
 
@@ -33,6 +36,12 @@ import ExternalLink from './ExternalLink.astro';
 
   ul > li {
     margin-left: 1rem;
+  }
+
+  @media (max-width: 640px) {
+    header {
+      margin-top: var(--space-md);
+    }
   }
 
   @media (prefers-color-scheme: dark) {
