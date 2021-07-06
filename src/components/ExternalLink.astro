@@ -1,8 +1,8 @@
 ---
-const { href } = Astro.props;
+const { href, type = 'primary' } = Astro.props;
 ---
 
-<a class="primary" href={href} target="_blank" rel="noopener noreferrer">
+<a class={type} href={href} target="_blank" rel="noopener noreferrer">
   <slot/>
 </a>
 
@@ -20,6 +20,37 @@ const { href } = Astro.props;
     background-color: var(--color-primary);
   }
 
+  .secondary {
+    position: relative;
+    padding: var(--space-xs) 0;
+  }
+
+  .secondary::before {
+    left: 50%;
+  }
+
+  .secondary::after {
+    right: 50%;
+  }
+
+
+
+  @media (prefers-reduced-motion: no-preference) {
+    .secondary::before, .secondary::after {
+      position: absolute;
+      content: "";
+      bottom: -5px;
+      width: 0%;
+      height: 1px;
+      background-color: var(--color-primary);
+      transition: width 200ms ease-out;
+    }
+    .secondary:hover::before, .secondary:hover::after {
+      width: 50%;
+      transition: width 200ms ease-in;
+    }
+  }
+
   @media (prefers-color-scheme: dark) {
     .primary {
       border: 1px solid var(--color-secondary);
@@ -27,6 +58,10 @@ const { href } = Astro.props;
 
     .primary:hover {
       color: var(--color-primary);
+      background-color: var(--color-secondary);
+    }
+
+    .secondary::before, .secondary::after {
       background-color: var(--color-secondary);
     }
   }

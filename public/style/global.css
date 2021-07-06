@@ -30,12 +30,13 @@
   --user-font-scale: 1rem - 16px;
 
   --color-primary: hsla(0, 0%, 8%, 1);
-  --color-secondary: hsla(0, 0%, 88%, 1);
+  --color-secondary: hsla(0, 0%, 100%, 1);
 
   --font-regular: 400;
   --font-semibold: 600;
   --font-extrabold: 800;
 
+  --space-xs: 0.25rem;
   --space-sm: 0.5rem;
   --space-md: 1rem;
   --space-lg: 3rem;
